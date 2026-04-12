@@ -11,6 +11,10 @@
 - [ ] **REPO-02**: Visitor can find README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, and roadmap entry points from the repository
 - [ ] **REPO-03**: Visitor can view examples or launch assets that show the white-box parsing workflow quickly
 
+### Community
+
+- [ ] **COMM-01**: Contributor can find clear issue paths for bugs, parser examples, and beginner-friendly contributions
+
 ### Parsing
 
 - [ ] **PARS-01**: User can paste a technical English sentence and split it into inspectable tokens
@@ -64,13 +68,28 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| Pending roadmap creation | - | Pending |
+| REPO-01 | Phase 1 | Pending |
+| REPO-02 | Phase 1 | Pending |
+| PARS-01 | Phase 2 | Pending |
+| PARS-02 | Phase 2 | Pending |
+| PARS-03 | Phase 2 | Pending |
+| PARS-04 | Phase 2 | Pending |
+| DEMO-01 | Phase 3 | Pending |
+| DEMO-02 | Phase 3 | Pending |
+| IR-01 | Phase 4 | Pending |
+| IR-02 | Phase 4 | Pending |
+| EDIT-01 | Phase 4 | Pending |
+| EDIT-02 | Phase 4 | Pending |
+| EDIT-03 | Phase 4 | Pending |
+| EDIT-04 | Phase 4 | Pending |
+| REPO-03 | Phase 5 | Pending |
+| COMM-01 | Phase 5 | Pending |
 
 **Coverage:**
-- v1 requirements: 15 total
-- Mapped to phases: 0
-- Unmapped: 15
+- v1 requirements: 16 total
+- Mapped to phases: 16
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-13*
-*Last updated: 2026-04-13 after initial definition*
+*Last updated: 2026-04-13 after roadmap creation*
