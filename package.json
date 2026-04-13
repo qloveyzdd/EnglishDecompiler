@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "check": "tsc -p tsconfig.json --noEmit"
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test tests/parser-core-v0.test.ts",
+    "fixtures:parse": "tsx scripts/parse-fixtures.ts"
   },
   "devDependencies": {
     "tsx": "^4.19.2",
