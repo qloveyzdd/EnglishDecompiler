@@ -1,8 +1,8 @@
 ---
 phase: 01
 slug: repository-positioning-and-launch-skeleton
-status: blocked
-threats_open: 1
+status: verified
+threats_open: 0
 asvs_level: 1
 created: 2026-04-13
 ---
@@ -28,7 +28,7 @@ created: 2026-04-13
 
 | Threat ID | Category | Component | Disposition | Mitigation | Status |
 |-----------|----------|-----------|-------------|------------|--------|
-| T-01-01 | Tampering | README.md and ROADMAP.md | mitigate | Top-level repo links should resolve to tracked files. `README.md` correctly links `README.zh-CN.md`, `ROADMAP.md`, and `CONTRIBUTING.md`, but [README.md:10](/E:/EnglishDecompiler/README.md:10) still points to missing `./assets/hero.gif`. | open |
+| T-01-01 | Tampering | README.md and ROADMAP.md | mitigate | Top-level repo links now resolve to tracked files. [README.md:10](/E:/EnglishDecompiler/README.md:10) points to [hero.gif](/E:/EnglishDecompiler/assets/hero.gif), which now exists in the repository. | closed |
 | T-01-02 | Spoofing | Public project positioning | mitigate | Positioning is explicitly white-box and explicitly not a translator or English-learning tool in [README.md:3](/E:/EnglishDecompiler/README.md:3), [README.md:5](/E:/EnglishDecompiler/README.md:5), [README.md:7](/E:/EnglishDecompiler/README.md:7), [README.md:59](/E:/EnglishDecompiler/README.md:59), [README.md:68](/E:/EnglishDecompiler/README.md:68), and [ROADMAP.md:27](/E:/EnglishDecompiler/ROADMAP.md:27). | closed |
 | T-01-03 | Spoofing | Contribution and reporting guidance | mitigate | Official contribution flow stays in repo-owned files and GitHub-managed templates via [CONTRIBUTING.md:19](/E:/EnglishDecompiler/CONTRIBUTING.md:19), [CONTRIBUTING.md:44](/E:/EnglishDecompiler/CONTRIBUTING.md:44), and [config.yml:1](/E:/EnglishDecompiler/.github/ISSUE_TEMPLATE/config.yml:1). | closed |
 | T-01-04 | Repudiation | Issue intake templates | mitigate | Structured bug and parser-example templates require reproducible fields in [bug_report.md:8](/E:/EnglishDecompiler/.github/ISSUE_TEMPLATE/bug_report.md:8) and [parser_example.md:8](/E:/EnglishDecompiler/.github/ISSUE_TEMPLATE/parser_example.md:8). | closed |
@@ -49,12 +49,13 @@ No accepted risks.
 | Audit Date | Threats Total | Closed | Open | Run By |
 |------------|---------------|--------|------|--------|
 | 2026-04-13 | 4 | 3 | 1 | Codex inline secure-phase audit |
+| 2026-04-13 | 4 | 4 | 0 | Codex follow-up after adding hero.gif |
 
 ---
 
 ## Findings
 
-- Open threat `T-01-01`: the main README still advertises a hero media asset that is not present in the repository, so the top-level landing surface contains a broken repo-owned link.
+- Closed threat `T-01-01`: the previously missing hero media asset now exists at [hero.gif](/E:/EnglishDecompiler/assets/hero.gif), so the README top-level media reference is no longer broken.
 - Closed threat `T-01-02`: the public copy consistently states the repo is a white-box parser for technical English and not a translator or English-learning tool.
 - Closed threat `T-01-03`: contribution guidance and contact routing stay inside repo-owned files and GitHub issue config.
 - Closed threat `T-01-04`: bug and parser-example intake both collect structured evidence suitable for triage.
@@ -65,7 +66,7 @@ No accepted risks.
 
 - [x] All threats have a disposition (mitigate / accept / transfer)
 - [x] Accepted risks documented in Accepted Risks Log
-- [ ] `threats_open: 0` confirmed
-- [ ] `status: verified` set in frontmatter
+- [x] `threats_open: 0` confirmed
+- [x] `status: verified` set in frontmatter
 
-**Approval:** blocked pending closure or accepted-risk decision for `T-01-01`
+**Approval:** verified 2026-04-13
