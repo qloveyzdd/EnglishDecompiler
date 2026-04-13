@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Gap closure phase created from v1.0 audit
-last_updated: "2026-04-14T04:05:00+08:00"
-last_activity: 2026-04-14 -- Added Phase 6 for milestone audit gap closure
+stopped_at: Phase 06 context gathered
+last_updated: "2026-04-14T04:50:42.2476156+08:00"
+last_activity: 2026-04-14 -- Phase 6 context gathered
 progress:
   total_phases: 6
   completed_phases: 5
@@ -21,30 +21,31 @@ progress:
 See: `.planning/PROJECT.md`
 
 **Core value:** Developers can inspect and correct how a technical English sentence maps to structure, instead of blindly trusting translation output.
-**Current focus:** Phase 6 — Milestone Evidence Reconciliation
+**Current focus:** Phase 6 - Milestone Evidence Reconciliation
 
 ## Current Position
 
-Phase: 6 (Milestone Evidence Reconciliation) — NOT STARTED
+Phase: 6 (Milestone Evidence Reconciliation) - NOT STARTED
 Plan: 0 of 0
-Status: Ready for discuss phase
-Last activity: 2026-04-14 -- Added Phase 6 for milestone audit gap closure
+Status: Ready for plan phase
+Last activity: 2026-04-14 -- Phase 6 context gathered
 
 Progress: [########--] 83%
 
 ## Recent Decisions
 
-- Phase 4 keeps the existing three-pane workbench instead of introducing a new screen
-- JSON and IR must derive from the same corrected parse result
-- Token corrections persist only by trimmed sentence plus token index in `localStorage`
-- Explanations stay short and explicit: token, role, rule id, and reason
+- Phase 6 will backfill retroactive `*-VERIFICATION.md` artifacts for Phases 1-5.
+- `REPO-01` and `REPO-02` are treated as already shipped unless verification finds a concrete mismatch.
+- This phase should change `.planning` first and touch public repo files only if verification proves they are incomplete.
+- The completion target is a clean re-run of the milestone audit without accepted debt.
 
 ## Blockers
 
 - v1.0 milestone audit is blocked by stale `REPO-01` / `REPO-02` traceability.
 - No phase currently has a `*-VERIFICATION.md` artifact, so archive-grade evidence is incomplete.
+- Phase 6 should close both gaps without expanding shipped product scope.
 
 ## Session Continuity
 
-Stopped at: Gap closure phase created from v1.0 audit
-Resume file: None
+Stopped at: Phase 06 context gathered
+Resume file: .planning/phases/06-milestone-evidence-reconciliation/06-CONTEXT.md
