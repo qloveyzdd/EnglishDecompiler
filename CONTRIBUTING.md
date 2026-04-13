@@ -16,6 +16,12 @@ This project is still early. The highest-value contributions right now are:
 - Improve wording in the repo so the product positioning stays sharp and consistent
 - Pick up a small issue labeled `good first issue`
 
+Quick links:
+
+- Bug reports: https://github.com/qloveyzdd/EnglishDecompiler/issues/new?template=bug_report.md
+- Parser examples wanted: https://github.com/qloveyzdd/EnglishDecompiler/issues/new?template=parser_example.md
+- Good first issue: https://github.com/qloveyzdd/EnglishDecompiler/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22
+
 ## Before You Open an Issue
 
 - Check whether the same problem or sentence has already been reported
@@ -31,6 +37,7 @@ If you open a `parser examples wanted` issue, the best submissions include:
 - A source link or a short note about where it came from
 - Why the sentence is hard, ambiguous, or painful in real use
 - What structure or explanation you expected
+- Whether it should also be added to `examples/launch-examples.json`
 
 Early examples from GitHub READMEs, API docs, setup guides, and AI tooling docs are especially useful.
 

@@ -15,7 +15,7 @@
 | 2 | Parser Core v0 | Parse single technical sentences into stable roles and structured JSON | PARS-01, PARS-02, PARS-03, PARS-04 | 4 |
 | 3 | Local Demo v0 | Expose the parser through a minimal local web demo | DEMO-01, DEMO-02 | 4 |
 | 4 | IR and White-Box Correction Loop | Turn parser output into an editable reasoning surface instead of static output | IR-01, IR-02, EDIT-01, EDIT-02, EDIT-03, EDIT-04 | 5 |
-| 5 | Launch Assets and Feedback Intake | 1/2 | In Progress|  |
+| 5 | Launch Assets and Feedback Intake | 2/2 | Complete   | 2026-04-13 |
 
 ## Phase Details
 

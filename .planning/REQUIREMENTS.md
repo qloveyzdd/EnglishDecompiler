@@ -13,7 +13,7 @@
 
 ### Community
 
-- [ ] **COMM-01**: Contributor can find clear issue paths for bugs, parser examples, and beginner-friendly contributions
+- [x] **COMM-01**: Contributor can find clear issue paths for bugs, parser examples, and beginner-friendly contributions
 
 ### Parsing
 
@@ -83,7 +83,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | EDIT-03 | Phase 4 | Complete |
 | EDIT-04 | Phase 4 | Complete |
 | REPO-03 | Phase 5 | Complete |
-| COMM-01 | Phase 5 | Pending |
+| COMM-01 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 16 total
@@ -92,4 +92,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-04-13*
-*Last updated: 2026-04-14 after Phase 04 execution*
+*Last updated: 2026-04-14 after Phase 05 execution*

@@ -9,7 +9,7 @@ It turns technical English into inspectable structure that developers can verify
 
 ![Hero demo](./assets/hero.gif)
 
-[中文说明](./README.zh-CN.md) · [Roadmap](./ROADMAP.md) · [Contributing](./CONTRIBUTING.md)
+[Examples](./examples/launch-examples.json) | [Chinese README](./README.zh-CN.md) | [Roadmap](./ROADMAP.md) | [Contributing](./CONTRIBUTING.md)
 
 ## Why this exists
 
@@ -49,14 +49,33 @@ next_action: train
 IR view:
 
 ```python
-initialize(model)
-before:
-    train()
+before(train):
+  initialize(model)
 ```
 
 ## Why this is different from translation
 
 Translation gives you an answer. Parsing gives you control.
+
+## Launch Assets
+
+- [Hero GIF](./assets/hero.gif)
+- [Workbench overview](./assets/launch/demo-overview.png)
+- [Correction loop](./assets/launch/correction-loop.png)
+- [JSON + IR view](./assets/launch/json-ir-view.png)
+- [Social preview](./assets/social-preview.png)
+
+## Examples Corpus
+
+The canonical launch examples live in [examples/launch-examples.json](./examples/launch-examples.json).
+
+They stay sentence-first, technical-doc oriented, and scoped to the current MVP.
+
+## Feedback
+
+- [Report a bug](https://github.com/qloveyzdd/EnglishDecompiler/issues/new?template=bug_report.md)
+- [Share a parser example](https://github.com/qloveyzdd/EnglishDecompiler/issues/new?template=parser_example.md)
+- [Browse good first issues](https://github.com/qloveyzdd/EnglishDecompiler/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
 ## Start in 30 seconds
 

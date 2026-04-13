@@ -3,3 +3,9 @@ contact_links:
   - name: Contribution guide
     url: https://github.com/qloveyzdd/EnglishDecompiler/blob/main/CONTRIBUTING.md
     about: Please read the contribution guide before opening a new issue.
+  - name: Good first issue
+    url: https://github.com/qloveyzdd/EnglishDecompiler/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22
+    about: Browse beginner-friendly issues that are small and well bounded.
+  - name: Launch examples corpus
+    url: https://github.com/qloveyzdd/EnglishDecompiler/blob/main/examples/launch-examples.json
+    about: Review the canonical launch examples before submitting a new parser example.

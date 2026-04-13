@@ -24,3 +24,8 @@ What did the parser produce, or what went wrong?
 ## Why the sentence matters
 
 Explain why this sentence is useful, painful, or representative.
+
+## Add to launch examples?
+
+Should this sentence also be added to `examples/launch-examples.json`?
+If yes, explain why it belongs in the public launch corpus.
