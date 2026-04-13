@@ -68,8 +68,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| REPO-01 | Phase 1 | Pending |
-| REPO-02 | Phase 1 | Pending |
+| REPO-01 | Phase 6 | Pending |
+| REPO-02 | Phase 6 | Pending |
 | PARS-01 | Phase 2 | Complete |
 | PARS-02 | Phase 2 | Complete |
 | PARS-03 | Phase 2 | Complete |
@@ -92,4 +92,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-04-13*
-*Last updated: 2026-04-14 after Phase 05 execution*
+*Last updated: 2026-04-14 after milestone gap planning*

@@ -7,7 +7,7 @@
 
 ## Summary
 
-**5 phases** | **16 requirements mapped** | All v1 requirements covered
+**6 phases** | **16 requirements mapped** | Gap closure phase added for milestone audit findings
 
 | # | Phase | Goal | Requirements | Success Criteria |
 |---|-------|------|--------------|------------------|
@@ -15,7 +15,8 @@
 | 2 | Parser Core v0 | Parse single technical sentences into stable roles and structured JSON | PARS-01, PARS-02, PARS-03, PARS-04 | 4 |
 | 3 | Local Demo v0 | Expose the parser through a minimal local web demo | DEMO-01, DEMO-02 | 4 |
 | 4 | IR and White-Box Correction Loop | Turn parser output into an editable reasoning surface instead of static output | IR-01, IR-02, EDIT-01, EDIT-02, EDIT-03, EDIT-04 | 5 |
-| 5 | Launch Assets and Feedback Intake | 2/2 | Complete   | 2026-04-13 |
+| 5 | Launch Assets and Feedback Intake | Turn the MVP into a launchable open-source release and open a channel for real-world parser failures. | REPO-03, COMM-01 | 4 |
+| 6 | Milestone Evidence Reconciliation | Close milestone audit gaps by reconciling requirement traceability and restoring archive-grade verification evidence. | REPO-01, REPO-02 | 3 |
 
 ## Phase Details
 
@@ -100,6 +101,21 @@
 3. The launch package is ready for GitHub, X, Hacker News, Reddit, and at least one Chinese developer community.
 4. The first feedback loop prioritizes collecting painful real-world technical sentences over polished marketing claims.
 
+### Phase 6: Milestone Evidence Reconciliation
+
+**Goal:** Close the v1.0 milestone audit gaps without changing shipped product scope.
+
+**Requirements:** REPO-01, REPO-02
+
+**Depends on:** Phases 1-5
+
+**UI hint**: no
+
+**Success criteria:**
+1. `REPO-01` and `REPO-02` are reconciled against the actually shipped Phase 1 surfaces instead of remaining stale in milestone audit.
+2. The planning evidence chain includes the missing per-phase verification artifacts or an explicit replacement accepted by the audit path.
+3. Re-running the milestone audit no longer reports archive-blocking gaps for requirement traceability or missing verification evidence.
+
 ## Coverage Check
 
 - Phase 1: REPO-01, REPO-02
@@ -107,8 +123,9 @@
 - Phase 3: DEMO-01, DEMO-02
 - Phase 4: IR-01, IR-02, EDIT-01, EDIT-02, EDIT-03, EDIT-04
 - Phase 5: REPO-03, COMM-01
+- Phase 6: REPO-01, REPO-02
 
-All v1 requirements map to exactly one phase.
+Phase 6 reopens `REPO-01` and `REPO-02` only for milestone audit reconciliation; it does not add new product scope.
 
 ---
 *Roadmap created: 2026-04-13*
