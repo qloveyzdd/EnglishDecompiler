@@ -48,11 +48,16 @@ function collectSegment(spans: ParseSpan[], markerIndex: number): SummarySegment
     }
   }
 
-  return {
+  const segment: SummarySegment = {
     marker: marker.normalized,
-    text: parts.join(" "),
-    kind: marker.kind
+    text: parts.join(" ")
   };
+
+  if (marker.kind !== undefined) {
+    segment.kind = marker.kind;
+  }
+
+  return segment;
 }
 
 function buildSummary(spans: ParseSpan[]): ParseSummary {
