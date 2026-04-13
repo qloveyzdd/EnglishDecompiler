@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: verifying
-stopped_at: Phase 3 UI-SPEC approved
-last_updated: "2026-04-13T06:25:39.654Z"
-last_activity: 2026-04-13
+status: executing
+stopped_at: Phase 3 planning complete
+last_updated: "2026-04-13T06:49:58.371Z"
+last_activity: 2026-04-13 -- Phase 03 planning complete
 progress:
   total_phases: 5
   completed_phases: 2
-  total_plans: 4
+  total_plans: 6
   completed_plans: 4
-  percent: 100
+  percent: 67
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Developers can inspect and correct how a technical English sentence maps to structure, instead of blindly trusting translation output.
-**Current focus:** Phase 2 — Parser Core v0
+**Current focus:** Phase 3 — Local Demo v0
 
 ## Current Position
 
-Phase: 2 of 5 (Parser Core v0)
+Phase: 3 of 5 (Local Demo v0)
 Plan: 2 of 2 in current phase
-Status: Phase complete — ready for verification
-Last activity: 2026-04-13
+Status: Ready to execute
+Last activity: 2026-04-13 -- Phase 03 planning complete
 
-Progress: [##########] 100%
+Progress: [######----] 67%
 
 ## Performance Metrics
 
@@ -65,6 +65,8 @@ Recent decisions affecting current work:
 - [Phase 2]: v0 covers imperative, simple condition, sequence, dependency, and purpose patterns only
 - [Phase 2]: The public contract is an ordered role list plus a minimal sentence summary
 - [Phase 2]: Seed lexicon is explicit and deterministic, with unknown fallback instead of forced labels
+- [Phase 3]: Demo uses `Vite + React + TypeScript` with a browser-only, blank-first three-pane workbench
+- [Phase 3]: `shadcn / base-nova` is the approved design-system baseline for implementation
 
 ### Pending Todos
 
@@ -76,6 +78,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-13T06:25:39.651Z
-Stopped at: Phase 3 UI-SPEC approved
-Resume file: .planning/phases/03-local-demo-v0/03-UI-SPEC.md
+Last session: 2026-04-13T06:49:58.369Z
+Stopped at: Phase 3 planning complete
+Resume file: .planning/phases/03-local-demo-v0/03-01-PLAN.md
