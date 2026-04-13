@@ -24,8 +24,8 @@
 
 ### IR View
 
-- [ ] **IR-01**: User can view a code-like IR generated from parsed structure
-- [ ] **IR-02**: User can see sequence, condition, purpose, and dependency reflected in the IR output
+- [x] **IR-01**: User can view a code-like IR generated from parsed structure
+- [x] **IR-02**: User can see sequence, condition, purpose, and dependency reflected in the IR output
 
 ### Demo
 
@@ -34,10 +34,10 @@
 
 ### Corrections
 
-- [ ] **EDIT-01**: User can change a token role from the demo UI
-- [ ] **EDIT-02**: User can regenerate JSON and IR immediately after a role change
-- [ ] **EDIT-03**: User can see a short reason for why a token received its current role
-- [ ] **EDIT-04**: User corrections persist locally across browser refresh
+- [x] **EDIT-01**: User can change a token role from the demo UI
+- [x] **EDIT-02**: User can regenerate JSON and IR immediately after a role change
+- [x] **EDIT-03**: User can see a short reason for why a token received its current role
+- [x] **EDIT-04**: User corrections persist locally across browser refresh
 
 ## v2 Requirements
 
@@ -76,12 +76,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PARS-04 | Phase 2 | Complete |
 | DEMO-01 | Phase 3 | Complete |
 | DEMO-02 | Phase 3 | Complete |
-| IR-01 | Phase 4 | Pending |
-| IR-02 | Phase 4 | Pending |
-| EDIT-01 | Phase 4 | Pending |
-| EDIT-02 | Phase 4 | Pending |
-| EDIT-03 | Phase 4 | Pending |
-| EDIT-04 | Phase 4 | Pending |
+| IR-01 | Phase 4 | Complete |
+| IR-02 | Phase 4 | Complete |
+| EDIT-01 | Phase 4 | Complete |
+| EDIT-02 | Phase 4 | Complete |
+| EDIT-03 | Phase 4 | Complete |
+| EDIT-04 | Phase 4 | Complete |
 | REPO-03 | Phase 5 | Pending |
 | COMM-01 | Phase 5 | Pending |
 
@@ -92,4 +92,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-04-13*
-*Last updated: 2026-04-13 after Phase 03 execution*
+*Last updated: 2026-04-14 after Phase 04 execution*

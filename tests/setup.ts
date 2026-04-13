@@ -14,4 +14,6 @@ beforeEach(() => {
       writeText: vi.fn().mockResolvedValue(undefined)
     }
   });
+
+  window.localStorage.clear();
 });

@@ -1,13 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { Copy, Play, Sparkles } from "lucide-react";
-import { parseSentence, type ParseResult } from "./index.js";
+import { parseSentence, type ParseResult, type ParseRole } from "./index.js";
 import { ExampleChips } from "@/components/demo/example-chips";
+import { IrPane } from "@/components/demo/ir-pane";
 import { JsonPane } from "@/components/demo/json-pane";
 import { PaneShell } from "@/components/demo/pane-shell";
 import { TokenPane } from "@/components/demo/token-pane";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { applyRoleOverrides, type SpanRoleOverride } from "@/lib/corrections.js";
 import { demoExamples } from "@/lib/demo";
+import { clearSentenceCorrections, loadSentenceCorrections, saveSentenceCorrections } from "@/lib/correction-storage.js";
+import { renderIr } from "@/lib/ir.js";
 
 type CopyState = "idle" | "success" | "error";
 
@@ -16,11 +20,14 @@ const parseErrorMessage = "Parse failed: this sentence is outside the v0 rule se
 
 export function App() {
   const [draftInput, setDraftInput] = useState("");
-  const [result, setResult] = useState<ParseResult | null>(null);
+  const [baseResult, setBaseResult] = useState<ParseResult | null>(null);
+  const [overrides, setOverrides] = useState<SpanRoleOverride[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [copyState, setCopyState] = useState<CopyState>("idle");
   const [needsReparse, setNeedsReparse] = useState(false);
+  const [selectedTokenIndex, setSelectedTokenIndex] = useState<number | null>(null);
   const copyResetRef = useRef<number | null>(null);
+  const result = baseResult === null ? null : applyRoleOverrides(baseResult, overrides);
 
   useEffect(() => {
     return () => {
@@ -31,6 +38,7 @@ export function App() {
   }, []);
 
   const formattedJson = result === null ? "" : JSON.stringify(result, null, 2);
+  const irText = result === null ? "" : renderIr(result);
 
   function clearCopyTimer() {
     if (copyResetRef.current !== null) {
@@ -42,11 +50,13 @@ export function App() {
   function handleDraftChange(nextValue: string) {
     setDraftInput(nextValue);
 
-    if (result !== null || error !== null) {
-      setResult(null);
+    if (baseResult !== null || error !== null) {
+      setBaseResult(null);
+      setOverrides([]);
       setError(null);
       setCopyState("idle");
       setNeedsReparse(true);
+      setSelectedTokenIndex(null);
       clearCopyTimer();
     }
   }
@@ -56,20 +66,58 @@ export function App() {
   }
 
   function handleParse() {
+    const trimmedInput = draftInput.trim();
+
     try {
-      const nextResult = parseSentence(draftInput.trim());
-      setResult(nextResult);
+      const nextBaseResult = parseSentence(trimmedInput);
+      const nextOverrides = loadSentenceCorrections(trimmedInput);
+      setBaseResult(nextBaseResult);
+      setOverrides(nextOverrides);
       setError(null);
       setCopyState("idle");
       setNeedsReparse(false);
+      setSelectedTokenIndex(null);
       clearCopyTimer();
     } catch {
-      setResult(null);
+      setBaseResult(null);
+      setOverrides([]);
       setError(parseErrorMessage);
       setCopyState("idle");
       setNeedsReparse(false);
+      setSelectedTokenIndex(null);
       clearCopyTimer();
     }
+  }
+
+  function handleSelectToken(index: number) {
+    setSelectedTokenIndex((current) => (current === index ? null : index));
+  }
+
+  function handleChangeRole(role: ParseRole) {
+    if (baseResult === null || selectedTokenIndex === null) {
+      return;
+    }
+
+    const originalSpan = baseResult.spans.find((span) => span.index === selectedTokenIndex) ?? null;
+    if (originalSpan === null) {
+      return;
+    }
+
+    const nextOverrides = overrides.filter((override) => override.tokenIndex !== selectedTokenIndex);
+    if (role !== originalSpan.role) {
+      nextOverrides.push({ tokenIndex: selectedTokenIndex, role });
+      nextOverrides.sort((left, right) => left.tokenIndex - right.tokenIndex);
+      saveSentenceCorrections(baseResult.input, nextOverrides);
+    } else {
+      clearSentenceCorrections(baseResult.input);
+      if (nextOverrides.length > 0) {
+        saveSentenceCorrections(baseResult.input, nextOverrides);
+      }
+    }
+
+    setOverrides(nextOverrides);
+    setCopyState("idle");
+    clearCopyTimer();
   }
 
   async function handleCopyJson() {
@@ -158,26 +206,43 @@ export function App() {
             description="Span order stays intact so you can inspect what the parser actually saw."
             className="border-primary/15"
           >
-            <TokenPane result={result} error={error} needsReparse={needsReparse} />
+            <TokenPane
+              baseResult={baseResult}
+              result={result}
+              error={error}
+              needsReparse={needsReparse}
+              selectedTokenIndex={selectedTokenIndex}
+              hasSavedCorrections={overrides.length > 0}
+              onSelectToken={handleSelectToken}
+              onChangeRole={handleChangeRole}
+            />
           </PaneShell>
 
           <PaneShell
-            title="Structured JSON"
-            description="The JSON pane always mirrors the visible parse result."
+            title="Structured Outputs"
+            description="JSON and IR always mirror the same corrected parse result."
             action={
               <Button type="button" variant="outline" disabled={result === null} onClick={handleCopyJson}>
                 <Copy className="size-4" />
                 {copyState === "success" ? "Copied JSON" : "Copy JSON"}
               </Button>
             }
+            contentClassName="gap-5"
           >
-            <JsonPane
-              result={result}
-              error={error}
-              needsReparse={needsReparse}
-              formattedJson={formattedJson}
-              copyState={copyState}
-            />
+            <div className="space-y-2">
+              <div className="space-y-1">
+                <p className="text-sm font-semibold text-foreground">Structured JSON</p>
+                <p className="text-sm text-muted-foreground">Exact visible parse payload, including any local corrections.</p>
+              </div>
+              <JsonPane
+                result={result}
+                error={error}
+                needsReparse={needsReparse}
+                formattedJson={formattedJson}
+                copyState={copyState}
+              />
+            </div>
+            <IrPane irText={irText} error={error} needsReparse={needsReparse} hasResult={result !== null} />
           </PaneShell>
         </section>
       </div>

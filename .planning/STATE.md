@@ -2,89 +2,48 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: Phase 4 planning complete
-last_updated: "2026-04-13T11:55:00.782Z"
-last_activity: 2026-04-13 -- Phase 04 planning complete
+status: ready_for_verification
+stopped_at: Phase 4 execution complete
+last_updated: "2026-04-14T01:53:00.2939283+08:00"
+last_activity: 2026-04-14 -- Phase 04 execution completed
 progress:
   total_phases: 5
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 8
-  completed_plans: 6
-  percent: 75
+  completed_plans: 8
+  percent: 100
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-04-13)
+See: `.planning/PROJECT.md`
 
 **Core value:** Developers can inspect and correct how a technical English sentence maps to structure, instead of blindly trusting translation output.
-**Current focus:** Phase 04 execution
+**Current focus:** Phase 04 - IR and White-Box Correction Loop
 
 ## Current Position
 
-Phase: 04 (IR and White-Box Correction Loop) - PLANNED
+Phase: 04 (IR and White-Box Correction Loop) - EXECUTED
 Plan: 2 of 2
-Status: Ready to execute
-Last activity: 2026-04-13 -- Phase 04 planning complete
+Status: Ready for verification
+Last activity: 2026-04-14 -- Phase 04 execution completed
 
-Progress: [#######---] 75%
+Progress: [##########] 100%
 
-## Performance Metrics
+## Recent Decisions
 
-**Velocity:**
+- Phase 4 keeps the existing three-pane workbench instead of introducing a new screen
+- JSON and IR must derive from the same corrected parse result
+- Token corrections persist only by trimmed sentence plus token index in `localStorage`
+- Explanations stay short and explicit: token, role, rule id, and reason
 
-- Total plans completed: 6
-- Average duration: 7 min
-- Total execution time: 0.7 hours
+## Blockers
 
-**By Phase:**
-
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| 1 | 2 | 22 min | 11 min |
-| 2 | 2 | 7 min | 4 min |
-| 3 | 2 | 18 min | 9 min |
-
-**Recent Trend:**
-
-- Last 2 plans: P1 12min, P2 6min
-- Trend: Stable
-
-| Phase 03 P01 | 12 min | 3 tasks | 23 files |
-| Phase 03 P02 | 6 min | 3 tasks | 9 files |
-
-## Accumulated Context
-
-### Decisions
-
-Decisions are logged in PROJECT.md Key Decisions table.
-Recent decisions affecting current work:
-
-- [Phase 2]: Parser core stays `TypeScript + Node` and pure-function based
-- [Phase 2]: v0 covers imperative, simple condition, sequence, dependency, and purpose patterns only
-- [Phase 2]: The public contract is an ordered role list plus a minimal sentence summary
-- [Phase 2]: Seed lexicon is explicit and deterministic, with unknown fallback instead of forced labels
-- [Phase 3]: Demo uses `Vite + React + TypeScript` with a browser-only, blank-first three-pane workbench
-- [Phase 3]: `shadcn / base-nova` is the approved design-system baseline for implementation
-- [Phase 3]: Example chips fill the textarea only, and `Copy JSON` always uses the exact visible payload
-- [Phase 4]: Keep the three-pane workbench and stack `JSON` plus `IR` in the right output area
-- [Phase 4]: Token role editing should be in-place via a compact menu, not a separate inspector
-- [Phase 4]: Explanations are contextual short reasons plus `rule id`, not always-on verbose text
-- [Phase 4]: Corrections persist locally by sentence plus token index only
-
-### Pending Todos
-
-None yet.
-
-### Blockers/Concerns
-
-None at planning closeout.
+None at execution closeout.
 
 ## Session Continuity
 
-Last session: 2026-04-13T11:38:16.593Z
-Stopped at: Phase 4 planning complete
-Resume file: .planning/phases/04-ir-and-white-box-correction-loop/04-01-PLAN.md
+Stopped at: Phase 4 execution complete
+Resume file: `.planning/phases/04-ir-and-white-box-correction-loop/04-02-SUMMARY.md`
