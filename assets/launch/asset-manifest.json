@@ -1,0 +1,14 @@
+{
+  "hero": "assets/hero.gif",
+  "screenshots": [
+    "assets/launch/demo-overview.png",
+    "assets/launch/correction-loop.png",
+    "assets/launch/json-ir-view.png"
+  ],
+  "socialPreview": "assets/social-preview.png",
+  "exampleIds": [
+    "setup-01",
+    "api-01",
+    "ai-03"
+  ]
+}

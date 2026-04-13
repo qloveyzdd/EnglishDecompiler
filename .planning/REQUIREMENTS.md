@@ -9,7 +9,7 @@
 
 - [ ] **REPO-01**: Visitor can understand the project value from the repository homepage within 30 seconds
 - [ ] **REPO-02**: Visitor can find README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, and roadmap entry points from the repository
-- [ ] **REPO-03**: Visitor can view examples or launch assets that show the white-box parsing workflow quickly
+- [x] **REPO-03**: Visitor can view examples or launch assets that show the white-box parsing workflow quickly
 
 ### Community
 
@@ -82,7 +82,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | EDIT-02 | Phase 4 | Complete |
 | EDIT-03 | Phase 4 | Complete |
 | EDIT-04 | Phase 4 | Complete |
-| REPO-03 | Phase 5 | Pending |
+| REPO-03 | Phase 5 | Complete |
 | COMM-01 | Phase 5 | Pending |
 
 **Coverage:**

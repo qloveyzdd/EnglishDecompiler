@@ -1,0 +1,90 @@
+{
+  "version": "0.1",
+  "focus": "single-sentence technical English",
+  "examples": [
+    {
+      "id": "setup-01",
+      "category": "setup-guide",
+      "sentence": "Initialize the model before training.",
+      "whyItMatters": "Shows the baseline sequence case used across the demo and README.",
+      "launchFit": "hero-and-screenshots"
+    },
+    {
+      "id": "setup-02",
+      "category": "setup-guide",
+      "sentence": "Install the package before running the server.",
+      "whyItMatters": "Matches the install-first style common in setup guides.",
+      "launchFit": "supporting-example"
+    },
+    {
+      "id": "setup-03",
+      "category": "setup-guide",
+      "sentence": "Load the config before running the server.",
+      "whyItMatters": "Keeps a simple config-first instruction inside the current ruleset.",
+      "launchFit": "supporting-example"
+    },
+    {
+      "id": "api-01",
+      "category": "api-doc",
+      "sentence": "If the server uses the config, load the file.",
+      "whyItMatters": "Demonstrates the current conditional parse path and code-like IR output.",
+      "launchFit": "json-ir-screenshot"
+    },
+    {
+      "id": "api-02",
+      "category": "api-doc",
+      "sentence": "Create the request with the model.",
+      "whyItMatters": "Shows the dependency relation with a small API-style instruction.",
+      "launchFit": "supporting-example"
+    },
+    {
+      "id": "api-03",
+      "category": "api-doc",
+      "sentence": "Set the response before running the request.",
+      "whyItMatters": "Exercises another short sequence instruction using the current object lexicon.",
+      "launchFit": "supporting-example"
+    },
+    {
+      "id": "readme-01",
+      "category": "github-readme",
+      "sentence": "Run the server with the config.",
+      "whyItMatters": "Looks like the short imperative lines common in README quick starts.",
+      "launchFit": "supporting-example"
+    },
+    {
+      "id": "readme-02",
+      "category": "github-readme",
+      "sentence": "Load the file after creating the request.",
+      "whyItMatters": "Uses an alias form that the parser already normalizes today.",
+      "launchFit": "supporting-example"
+    },
+    {
+      "id": "readme-03",
+      "category": "github-readme",
+      "sentence": "Use the model with the response.",
+      "whyItMatters": "Shows a compact dependency example that still reads like repo prose.",
+      "launchFit": "supporting-example"
+    },
+    {
+      "id": "ai-01",
+      "category": "ai-tooling-doc",
+      "sentence": "Create the request for the response.",
+      "whyItMatters": "Keeps the purpose marker visible in an AI-tooling flavored sentence.",
+      "launchFit": "supporting-example"
+    },
+    {
+      "id": "ai-02",
+      "category": "ai-tooling-doc",
+      "sentence": "Use the model for the response.",
+      "whyItMatters": "Shows the purpose relation in a short model-oriented instruction.",
+      "launchFit": "supporting-example"
+    },
+    {
+      "id": "ai-03",
+      "category": "ai-tooling-doc",
+      "sentence": "Set the config with the model.",
+      "whyItMatters": "Gives the launch corpus another dependency-style sentence with current vocabulary.",
+      "launchFit": "correction-loop-screenshot"
+    }
+  ]
+}
