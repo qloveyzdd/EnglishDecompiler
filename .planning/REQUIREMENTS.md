@@ -19,7 +19,7 @@
 
 - [x] **PARS-01**: User can paste a technical English sentence and split it into inspectable tokens
 - [x] **PARS-02**: User can see token roles for action, object, relation, condition, and purpose
-- [ ] **PARS-03**: User can parse common setup-guide and API-doc style sentences with a small deterministic ruleset
+- [x] **PARS-03**: User can parse common setup-guide and API-doc style sentences with a small deterministic ruleset
 - [x] **PARS-04**: User can receive stable structured JSON output for each parsed sentence
 
 ### IR View
@@ -72,7 +72,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | REPO-02 | Phase 1 | Pending |
 | PARS-01 | Phase 2 | Complete |
 | PARS-02 | Phase 2 | Complete |
-| PARS-03 | Phase 2 | Pending |
+| PARS-03 | Phase 2 | Complete |
 | PARS-04 | Phase 2 | Complete |
 | DEMO-01 | Phase 3 | Pending |
 | DEMO-02 | Phase 3 | Pending |
