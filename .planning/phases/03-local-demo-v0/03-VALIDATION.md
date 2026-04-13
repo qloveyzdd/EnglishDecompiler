@@ -1,9 +1,9 @@
 ---
 phase: 03
 slug: local-demo-v0
-status: draft
-nyquist_compliant: false
-wave_0_complete: false
+status: verified
+nyquist_compliant: true
+wave_0_complete: true
 created: 2026-04-13
 ---
 
@@ -38,12 +38,12 @@ created: 2026-04-13
 
 | Task ID | Plan | Wave | Requirement | Threat Ref | Secure Behavior | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|------------|-----------------|-----------|-------------------|-------------|--------|
-| 03-01-01 | 01 | 1 | DEMO-01 | T-03-01, T-03-02 | Vite app bootstrap preserves parser buildability and alias-aware app wiring | script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | no | pending |
-| 03-01-02 | 01 | 1 | DEMO-01 | T-03-01, T-03-03 | Demo shell consumes `parseSentence` directly and stays blank until explicit parse | ui+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | no | pending |
-| 03-01-03 | 01 | 1 | DEMO-01 | T-03-01, T-03-03 | Role highlighting and JSON pane render the parser contract without hidden transforms | ui+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | no | pending |
-| 03-02-01 | 02 | 2 | DEMO-01 | T-03-05, T-03-06 | Example helpers and edit-reset behavior keep the blank-first contract honest | test+ui | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | no | pending |
-| 03-02-02 | 02 | 2 | DEMO-02 | T-03-04, T-03-05 | Copy action mirrors the visible JSON exactly and exposes deterministic feedback states | test+ui | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | no | pending |
-| 03-02-03 | 02 | 2 | DEMO-01, DEMO-02 | T-03-02, T-03-04, T-03-06 | One-command validation reproduces install, check, test, and build for the full local demo | script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | no | pending |
+| 03-01-01 | 01 | 1 | DEMO-01 | T-03-01, T-03-02 | Vite app bootstrap preserves parser buildability and alias-aware app wiring | script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | yes | green |
+| 03-01-02 | 01 | 1 | DEMO-01 | T-03-01, T-03-03 | Demo shell consumes `parseSentence` directly and stays blank until explicit parse | ui+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | yes | green |
+| 03-01-03 | 01 | 1 | DEMO-01 | T-03-01, T-03-03 | Role highlighting and JSON pane render the parser contract without hidden transforms | ui+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | yes | green |
+| 03-02-01 | 02 | 2 | DEMO-01 | T-03-05, T-03-06 | Example helpers and edit-reset behavior keep the blank-first contract honest | test+ui | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | yes | green |
+| 03-02-02 | 02 | 2 | DEMO-02 | T-03-04, T-03-05 | Copy action mirrors the visible JSON exactly and exposes deterministic feedback states | test+ui | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | yes | green |
+| 03-02-03 | 02 | 2 | DEMO-01, DEMO-02 | T-03-02, T-03-04, T-03-06 | One-command validation reproduces install, check, test, and build for the full local demo | script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-03.ps1` | yes | green |
 
 *Status: pending, green, red, flaky*
 
@@ -51,9 +51,9 @@ created: 2026-04-13
 
 ## Wave 0 Requirements
 
-- [ ] `tests/local-demo-v0.test.tsx` - blank state, parse flow, example fill, stale-reset, and copy-flow contract tests
-- [ ] `scripts/validation/validate-phase-03.ps1` - one-command validation entrypoint for Windows-first local verification
-- [ ] `vite.config.ts` - Vitest environment configuration with alias support
+- [x] `tests/local-demo-v0.test.tsx` - blank state, parse flow, example fill, stale-reset, and copy-flow contract tests
+- [x] `scripts/validation/validate-phase-03.ps1` - one-command validation entrypoint for Windows-first local verification
+- [x] `vite.config.ts` - Vitest environment configuration with alias support
 
 ---
 
@@ -65,13 +65,27 @@ created: 2026-04-13
 
 ---
 
+## Validation Audit 2026-04-13
+
+| Metric | Count |
+|--------|-------|
+| Gaps found | 0 |
+| Resolved | 0 |
+| Escalated | 0 |
+
+Phase 3 already has automated coverage for the blank-first shell, explicit parse flow, example fill behavior, stale-output reset, copy behavior, and the repo-level install/check/test/build path.
+
+The UAT-reported failure against a long multi-sentence paragraph was reviewed and classified as a parser scope gap inherited from Phase 2, not a missing automated-verification gap in this phase's demo contract. It therefore does not change Nyquist compliance for Phase 3.
+
+---
+
 ## Validation Sign-Off
 
-- [ ] All tasks have automated verify or Wave 0 dependencies
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verify
-- [ ] Wave 0 covers all missing references
-- [ ] No watch-mode flags
-- [ ] Feedback latency < 10s
-- [ ] `nyquist_compliant: true` set in frontmatter
+- [x] All tasks have automated verify or Wave 0 dependencies
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all missing references
+- [x] No watch-mode flags
+- [x] Feedback latency < 10s
+- [x] `nyquist_compliant: true` set in frontmatter
 
-**Approval:** pending
+**Approval:** approved 2026-04-13
