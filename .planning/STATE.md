@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: ready_for_verification
-stopped_at: Phase 3 execution complete
-last_updated: "2026-04-13T07:12:37.144Z"
-last_activity: 2026-04-13 -- Phase 03 execution complete
+status: ready_for_planning
+stopped_at: Phase 4 context gathered
+last_updated: "2026-04-13T11:38:16.596Z"
+last_activity: 2026-04-13 -- Phase 04 context gathered
 progress:
   total_phases: 5
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 6
   completed_plans: 6
-  percent: 80
+  percent: 100
 ---
 
 # Project State
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Developers can inspect and correct how a technical English sentence maps to structure, instead of blindly trusting translation output.
-**Current focus:** Phase 03 — Local Demo v0 verification
+**Current focus:** Phase 04 planning
 
 ## Current Position
 
-Phase: 03 (Local Demo v0) — EXECUTED
-Plan: 2 of 2
-Status: Ready for verification
-Last activity: 2026-04-13 -- Phase 03 execution complete
+Phase: 04 (IR and White-Box Correction Loop) - CONTEXT GATHERED
+Plan: 0 of 0
+Status: Ready for planning
+Last activity: 2026-04-13 -- Phase 04 context gathered
 
 Progress: [########--] 80%
 
@@ -70,6 +70,10 @@ Recent decisions affecting current work:
 - [Phase 3]: Demo uses `Vite + React + TypeScript` with a browser-only, blank-first three-pane workbench
 - [Phase 3]: `shadcn / base-nova` is the approved design-system baseline for implementation
 - [Phase 3]: Example chips fill the textarea only, and `Copy JSON` always uses the exact visible payload
+- [Phase 4]: Keep the three-pane workbench and stack `JSON` plus `IR` in the right output area
+- [Phase 4]: Token role editing should be in-place via a compact menu, not a separate inspector
+- [Phase 4]: Explanations are contextual short reasons plus `rule id`, not always-on verbose text
+- [Phase 4]: Corrections persist locally by sentence plus token index only
 
 ### Pending Todos
 
@@ -77,10 +81,10 @@ None yet.
 
 ### Blockers/Concerns
 
-None at execution closeout.
+None at context closeout.
 
 ## Session Continuity
 
-Last session: 2026-04-13T07:12:37.144Z
-Stopped at: Phase 3 execution complete
-Resume file: .planning/phases/03-local-demo-v0/03-02-SUMMARY.md
+Last session: 2026-04-13T11:38:16.593Z
+Stopped at: Phase 4 context gathered
+Resume file: .planning/phases/04-ir-and-white-box-correction-loop/04-CONTEXT.md
