@@ -1,9 +1,9 @@
 ---
 phase: 04
 slug: ir-and-white-box-correction-loop
-status: planned
-nyquist_compliant: false
-wave_0_complete: false
+status: verified
+nyquist_compliant: true
+wave_0_complete: true
 created: 2026-04-13
 ---
 
@@ -21,7 +21,7 @@ created: 2026-04-13
 | **Config file** | `vite.config.ts`, `tests/setup.ts`, `scripts/validation/validate-phase-04.ps1` |
 | **Quick run command** | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` |
 | **Full suite command** | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` |
-| **Estimated runtime** | ~15 seconds |
+| **Estimated runtime** | ~90 seconds |
 
 ---
 
@@ -30,7 +30,7 @@ created: 2026-04-13
 - **After every task commit:** Run `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1`
 - **After every plan wave:** Run `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1`
 - **Before `/gsd-verify-work`:** Full suite must be green
-- **Max feedback latency:** 15 seconds
+- **Max feedback latency:** 2 minutes
 
 ---
 
@@ -38,12 +38,12 @@ created: 2026-04-13
 
 | Task ID | Plan | Wave | Requirement | Threat Ref | Secure Behavior | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|------------|-----------------|-----------|-------------------|-------------|--------|
-| 04-01-01 | 01 | 1 | EDIT-02, EDIT-03 | T-04-01, T-04-02 | Summary rebuilding and override application stay deterministic and keep parser provenance visible | unit+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | no | pending |
-| 04-01-02 | 01 | 1 | IR-01, IR-02, EDIT-04 | T-04-02, T-04-03 | IR and storage helpers derive from the same corrected state and keep persistence sentence-scoped | unit+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | no | pending |
-| 04-01-03 | 01 | 1 | IR-01, IR-02, EDIT-02, EDIT-03, EDIT-04 | T-04-01, T-04-02, T-04-03 | Helper-level tests cover correction, IR, and storage primitives before UI wiring | test+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | no | pending |
-| 04-02-01 | 02 | 2 | IR-01, IR-02, EDIT-01, EDIT-02, EDIT-03 | T-04-04, T-04-05 | Token selection, role editing, and explanation UI all point to the same corrected result | ui+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | no | pending |
-| 04-02-02 | 02 | 2 | EDIT-02, EDIT-04 | T-04-04, T-04-06 | Local persistence restores only sentence-scoped overrides and never keeps stale visible output after input edits | ui+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | no | pending |
-| 04-02-03 | 02 | 2 | IR-01, IR-02, EDIT-01, EDIT-02, EDIT-03, EDIT-04 | T-04-04, T-04-05, T-04-06 | The validation script, interaction tests, and build path prove the full correction loop works locally | test+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | no | pending |
+| 04-01-01 | 01 | 1 | EDIT-02, EDIT-03 | T-04-01, T-04-02 | Summary rebuilding and override application stay deterministic and keep parser provenance visible | unit+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | yes | green |
+| 04-01-02 | 01 | 1 | IR-01, IR-02, EDIT-04 | T-04-02, T-04-03 | IR and storage helpers derive from the same corrected state and keep persistence sentence-scoped | unit+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | yes | green |
+| 04-01-03 | 01 | 1 | IR-01, IR-02, EDIT-02, EDIT-03, EDIT-04 | T-04-01, T-04-02, T-04-03 | Helper-level tests cover correction, IR, and storage primitives before UI wiring | test+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | yes | green |
+| 04-02-01 | 02 | 2 | IR-01, IR-02, EDIT-01, EDIT-02, EDIT-03 | T-04-04, T-04-05 | Token selection, role editing, and explanation UI all point to the same corrected result | ui+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | yes | green |
+| 04-02-02 | 02 | 2 | EDIT-02, EDIT-04 | T-04-04, T-04-06 | Local persistence restores only sentence-scoped overrides and never keeps stale visible output after input edits | ui+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | yes | green |
+| 04-02-03 | 02 | 2 | IR-01, IR-02, EDIT-01, EDIT-02, EDIT-03, EDIT-04 | T-04-04, T-04-05, T-04-06 | The validation script, interaction tests, and build path prove the full correction loop works locally | test+script | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-04.ps1` | yes | green |
 
 *Status: pending, green, red, flaky*
 
@@ -51,9 +51,9 @@ created: 2026-04-13
 
 ## Wave 0 Requirements
 
-- [ ] `tests/white-box-correction-core.test.ts` - correction-layer, summary, IR, and storage helper tests
-- [ ] `tests/white-box-correction-loop.test.tsx` - token editing, explanation, JSON/IR regeneration, and persistence interaction tests
-- [ ] `scripts/validation/validate-phase-04.ps1` - one-command validation entrypoint for the full phase
+- [x] `tests/white-box-correction-core.test.ts` - correction-layer, summary, IR, and storage helper tests
+- [x] `tests/white-box-correction-loop.test.tsx` - token editing, explanation, JSON/IR regeneration, and persistence interaction tests
+- [x] `scripts/validation/validate-phase-04.ps1` - one-command validation entrypoint for the full phase
 
 ---
 
@@ -65,11 +65,26 @@ created: 2026-04-13
 
 ---
 
+## Validation Audit 2026-04-14
+
+| Metric | Count |
+|--------|-------|
+| Gaps found | 0 |
+| Resolved | 0 |
+| Escalated | 0 |
+
+Phase 4 already has automated coverage for helper-level correction rebuilding, sentence-scoped persistence, interactive token selection, explicit role changes, synchronized JSON and IR regeneration, stale-output clearing, corrected JSON copy behavior, and the repo-level install/check/test/build path.
+
+Security review is also closed with `threats_open: 0` in [04-SECURITY.md](/E:/EnglishDecompiler/.planning/phases/04-ir-and-white-box-correction-loop/04-SECURITY.md), and UAT passed `6/6` in [04-UAT.md](/E:/EnglishDecompiler/.planning/phases/04-ir-and-white-box-correction-loop/04-UAT.md). The remaining manual-only check is the human judgment around whether the IR still reads as honest code-like structure rather than over-claiming parser certainty.
+
+---
+
 ## Validation Sign-Off
 
-- [ ] All planned tasks have automated verification or a declared Wave 0 dependency
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verification
-- [ ] Validation script covers install, check, test, and build
-- [ ] Nyquist compliance will be re-evaluated after execution and validate-phase
+- [x] All tasks have automated verify or Wave 0 dependencies
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all missing references
+- [x] Validation script covers install, check, test, and build
+- [x] `nyquist_compliant: true` set in frontmatter
 
-**Approval:** ready for execution planning
+**Approval:** approved 2026-04-14
