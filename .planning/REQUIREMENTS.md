@@ -29,8 +29,8 @@
 
 ### Demo
 
-- [ ] **DEMO-01**: User can use a local web demo with source input, token-role highlighting, and structured output panes
-- [ ] **DEMO-02**: User can copy the current JSON output from the demo
+- [x] **DEMO-01**: User can use a local web demo with source input, token-role highlighting, and structured output panes
+- [x] **DEMO-02**: User can copy the current JSON output from the demo
 
 ### Corrections
 
@@ -74,8 +74,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PARS-02 | Phase 2 | Complete |
 | PARS-03 | Phase 2 | Complete |
 | PARS-04 | Phase 2 | Complete |
-| DEMO-01 | Phase 3 | Pending |
-| DEMO-02 | Phase 3 | Pending |
+| DEMO-01 | Phase 3 | Complete |
+| DEMO-02 | Phase 3 | Complete |
 | IR-01 | Phase 4 | Pending |
 | IR-02 | Phase 4 | Pending |
 | EDIT-01 | Phase 4 | Pending |
@@ -92,4 +92,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-04-13*
-*Last updated: 2026-04-13 after roadmap creation*
+*Last updated: 2026-04-13 after Phase 03 execution*

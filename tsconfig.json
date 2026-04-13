@@ -8,9 +8,16 @@
     "rootDir": "src",
     "strict": true,
     "noEmitOnError": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
-    "src/**/*.ts"
+    "src/index.ts",
+    "src/parser/**/*.ts"
   ]
 }
