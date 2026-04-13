@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: verifying
-stopped_at: Phase 2 context gathered
-last_updated: "2026-04-13T00:51:50.640Z"
-last_activity: 2026-04-13
+status: executing
+stopped_at: Phase 2 planning complete
+last_updated: "2026-04-13T01:00:48.270Z"
+last_activity: 2026-04-13 -- Phase 2 planning complete
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 2
+  total_plans: 4
   completed_plans: 2
-  percent: 100
+  percent: 50
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Developers can inspect and correct how a technical English sentence maps to structure, instead of blindly trusting translation output.
-**Current focus:** Phase 1 - Repository Positioning and Launch Skeleton
+**Current focus:** Phase 2 - Parser Core v0
 
 ## Current Position
 
-Phase: 1 of 5 (Repository Positioning and Launch Skeleton)
+Phase: 2 of 5 (Parser Core v0)
 Plan: 2 of 2 in current phase
-Status: Phase complete - ready for verification
-Last activity: 2026-04-13
+Status: Ready to execute
+Last activity: 2026-04-13 -- Phase 2 planning complete
 
-Progress: [##########] 100%
+Progress: [#####-----] 50%
 
 ## Performance Metrics
 
@@ -58,10 +58,10 @@ Progress: [##########] 100%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- [Phase 1]: Repository stays English-first, with a separately linked Chinese companion document
-- [Phase 1]: License is Apache-2.0
-- [Phase 1]: Community files should be standard open-source quality, not placeholder-only
-- [Phase 1]: README keeps a `hero.gif` placeholder and uses inspectability-focused positioning
+- [Phase 2]: Parser core stays `TypeScript + Node` and pure-function based
+- [Phase 2]: v0 covers imperative, simple condition, sequence, dependency, and purpose patterns only
+- [Phase 2]: The public contract is an ordered role list plus a minimal sentence summary
+- [Phase 2]: Seed lexicon is explicit and deterministic, with unknown fallback instead of forced labels
 
 ### Pending Todos
 
@@ -73,6 +73,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-13T00:51:50.623Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-parser-core-v0/02-CONTEXT.md
+Last session: 2026-04-13T01:00:48.267Z
+Stopped at: Phase 2 planning complete
+Resume file: .planning/phases/02-parser-core-v0/02-01-PLAN.md
