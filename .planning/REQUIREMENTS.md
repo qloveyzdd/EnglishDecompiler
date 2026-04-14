@@ -7,8 +7,8 @@
 
 ### Repository
 
-- [ ] **REPO-01**: Visitor can understand the project value from the repository homepage within 30 seconds
-- [ ] **REPO-02**: Visitor can find README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, and roadmap entry points from the repository
+- [x] **REPO-01**: Visitor can understand the project value from the repository homepage within 30 seconds
+- [x] **REPO-02**: Visitor can find README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, and roadmap entry points from the repository
 - [x] **REPO-03**: Visitor can view examples or launch assets that show the white-box parsing workflow quickly
 
 ### Community
@@ -68,8 +68,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| REPO-01 | Phase 6 | Pending |
-| REPO-02 | Phase 6 | Pending |
+| REPO-01 | Phase 6 | Complete |
+| REPO-02 | Phase 6 | Complete |
 | PARS-01 | Phase 2 | Complete |
 | PARS-02 | Phase 2 | Complete |
 | PARS-03 | Phase 2 | Complete |
@@ -92,4 +92,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-04-13*
-*Last updated: 2026-04-14 after milestone gap planning*
+*Last updated: 2026-04-14 after Phase 6 evidence reconciliation*
