@@ -2,7 +2,7 @@
 
 ## Shipped Milestones
 
-- [x] **v1.0 MVP** - Phases 1-6, 12 plans, shipped `2026-04-14`. [Roadmap Archive](/E:/EnglishDecompiler/.planning/milestones/v1.0-ROADMAP.md) · [Requirements Archive](/E:/EnglishDecompiler/.planning/milestones/v1.0-REQUIREMENTS.md) · [Audit Archive](/E:/EnglishDecompiler/.planning/milestones/v1.0-MILESTONE-AUDIT.md)
+- [x] **v1.0 MVP** - Phases 1-6, 12 plans, shipped `2026-04-14`. [Roadmap Archive](/E:/EnglishDecompiler/.planning/milestones/v1.0-ROADMAP.md) | [Requirements Archive](/E:/EnglishDecompiler/.planning/milestones/v1.0-REQUIREMENTS.md) | [Audit Archive](/E:/EnglishDecompiler/.planning/milestones/v1.0-MILESTONE-AUDIT.md)
 
 ## Current Position
 

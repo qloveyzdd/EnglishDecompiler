@@ -24,7 +24,7 @@
 
 **Git range:** `fbc06c1` -> `33fefc6`
 
-**Archive:** [Roadmap](/E:/EnglishDecompiler/.planning/milestones/v1.0-ROADMAP.md) · [Requirements](/E:/EnglishDecompiler/.planning/milestones/v1.0-REQUIREMENTS.md) · [Audit](/E:/EnglishDecompiler/.planning/milestones/v1.0-MILESTONE-AUDIT.md)
+**Archive:** [Roadmap](/E:/EnglishDecompiler/.planning/milestones/v1.0-ROADMAP.md) | [Requirements](/E:/EnglishDecompiler/.planning/milestones/v1.0-REQUIREMENTS.md) | [Audit](/E:/EnglishDecompiler/.planning/milestones/v1.0-MILESTONE-AUDIT.md)
 
 **What's next:** Expand beyond the single-sentence parser contract, add export/integration paths, and define the next milestone with `/gsd-new-milestone`.
 
