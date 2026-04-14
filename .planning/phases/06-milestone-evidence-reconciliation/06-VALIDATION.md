@@ -80,6 +80,12 @@ Phase 6 should not rely on product tests to prove success. The phase is valid wh
 
 The Phase 6 validator should assert those exact states directly.
 
+This audit re-ran:
+
+- `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\validation\validate-phase-06.ps1`
+
+The run passed and ended with `Phase 06 validation passed.`. Phase 6 UAT is now closed at `3/3` in [06-UAT.md](/E:/EnglishDecompiler/.planning/phases/06-milestone-evidence-reconciliation/06-UAT.md), and the security audit is already closed with `threats_open: 0` in [06-SECURITY.md](/E:/EnglishDecompiler/.planning/phases/06-milestone-evidence-reconciliation/06-SECURITY.md). The clean milestone audit in [v1.0-MILESTONE-AUDIT.md](/E:/EnglishDecompiler/.planning/v1.0-MILESTONE-AUDIT.md) still reports `status: passed` and `requirements: 16/16`, so Phase 6 remains Nyquist-compliant with `Gaps found = 0`.
+
 ---
 
 ## Validation Sign-Off
