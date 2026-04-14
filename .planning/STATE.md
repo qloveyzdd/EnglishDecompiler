@@ -1,11 +1,11 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.0
-milestone_name: milestone
-status: planning
-stopped_at: Phase 06 validation complete
-last_updated: "2026-04-14T20:35:06.8490809+08:00"
-last_activity: 2026-04-14 -- Phase 6 validation complete
+milestone_name: MVP
+status: complete
+stopped_at: Milestone v1.0 complete
+last_updated: "2026-04-14T20:53:37.4909671+08:00"
+last_activity: 2026-04-14 -- Milestone v1.0 complete
 progress:
   total_phases: 6
   completed_phases: 6
@@ -19,33 +19,32 @@ progress:
 ## Project Reference
 
 See: `.planning/PROJECT.md`
+See: `.planning/MILESTONES.md`
 
 **Core value:** Developers can inspect and correct how a technical English sentence maps to structure, instead of blindly trusting translation output.
-**Current focus:** Phase 6 - Milestone Evidence Reconciliation complete
+**Current focus:** Planning next milestone
 
 ## Current Position
 
-Phase: 6 (Milestone Evidence Reconciliation) - COMPLETE
-Plan: 2 of 2
-Status: Ready for milestone completion
-Last activity: 2026-04-14 -- Phase 6 validation complete
+Milestone: v1.0 (MVP) - SHIPPED
+Status: Ready for `/gsd-new-milestone`
+Last activity: 2026-04-14 -- Milestone v1.0 complete
 
 Progress: [##########] 100%
 
 ## Recent Decisions
 
-- Phase 1-5 now all have phase-level verification reports derived from shipped evidence.
-- `REPO-01` and `REPO-02` are reconciled to complete in `REQUIREMENTS.md`.
-- Phase 6 now has its own verification report and validator, so the missing-verification gap does not move forward.
-- The `v1.0` milestone audit now passes cleanly with `requirements: 16/16`.
+- `v1.0` is archived to `.planning/milestones/` with roadmap, requirements, and audit snapshots.
+- The active roadmap is now collapsed to a milestone-level summary.
+- Phase directories remain in place as raw execution history; they were not moved during milestone completion.
+- The next planning cycle should begin from shipped v1.0 behavior and the documented single-sentence parser debt.
 
 ## Blockers
 
 - None.
-- Phase 6 UAT, security review, and validation are all complete.
-- The milestone audit already passes; next step is milestone completion.
+- Next milestone goals are not defined yet.
 
 ## Session Continuity
 
-Stopped at: Phase 06 validation complete
-Resume file: .planning/phases/06-milestone-evidence-reconciliation/06-VALIDATION.md
+Stopped at: Milestone v1.0 complete
+Resume file: .planning/MILESTONES.md
